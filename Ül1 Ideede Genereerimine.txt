@@ -1,0 +1,26 @@
+Lõpuprojekt "Arvutimängu lehekülg".
+    Index 
+    -Kataloogi lehekülg, mis tutvustab ning annab juhendeid mängudele.
+    -Kataloogis mingi elemendi peale vajutades, suureneb see element.
+    -Suurenenud elemendis saab näha infot ja juhendit ning nupp, mis suunab ümber kasutaja valitud mängulehele.
+    -Saab kergelt kataloogi lisada tulevikus rohkem mänge, kuna elemendid on grid layout-is.
+
+    Mäng 1 Lehekülg: Ajaraiskamis mäng
+    -Mängu alustades käivitub esimene taimer, mis näitab, kui kaua mäng on kestnud...
+    -ja teine timer, mis hakkab kindlast 'x' arvust alla lugema iga sekund.
+    -Mängija peab iga paari sekundi pärast ehk enne kui 'x' jõuab 0-ni vajutama nupule, et lähtestada arvu tagasi algsele väärtusele.
+    -Lehekülje taustavärv muutub tumedamaks, mida lähemal x on 0-le.
+
+    Mäng 2 Lehekülg: "TIC TAC TOE"
+    -Mängijad saavad ainult ühe arvuti peal mängida.
+    -Mängijad korda mööda liigutusi teha
+    -Mängijad saavad valida "Classic" või mingi hiljem lisatud mängu versiooni
+    -Iga kord kui mäng lõpeb, siis kohe algab uus.
+    -Võitude ja kaotuste lugemine lehekülje üleval keskel või nurgas
+    -Saab vajutada nupudele "reset" ja "switch". "reset" tühistab skoori aga "switch" vahetab pooli.
+        
+        Classic:
+        -Lehekülje keskel on 3x3 ruusustik.
+        -Classic versioonis iga kord kui mäng lõpeb ja on alganud uus, siis vasakul pool ilmul hägusalt või hallilt 'eelmine mäng'.
+        -Lehekülje alla tekib noole nuppud millega saab kerida tagasi eelmiste mängudesse.
+        -Kui on tagasi keritud, siis järgmine mäng ilmub ilmul hägusalt või hallilt paremal pool

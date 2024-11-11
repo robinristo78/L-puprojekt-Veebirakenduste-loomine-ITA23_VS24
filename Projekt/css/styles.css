@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: #f5f5f5;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Roboto', sans-serif;
+    color: #222222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.p-0 {
+    padding: 0rem;
+}
+
+.p-1 {
+    padding: 0.25rem;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.p-4 {
+    padding: 1.5rem;
+}
+
+.p-5 {
+    padding: 3rem;
+}
+
+.m-1 {
+    margin: 0.25rem;
+}
+
+.bg-primary {
+    background: #007BFF;
+}
+
+.bg-dark {
+    background: #222222;
+}
+
+.bg-light {
+    background: white;
+}
+
+.text-white {
+    color: white;
+}
+
+nav {
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+nav p {
+    font-size: 28px;
+    display: inline;
+}
+
+nav h1 {
+    font-size: 48px;
+    display: inline;
+}
+
+nav h1 span {
+    margin-left: 0.25rem;
+    border-radius: 50rem;
+    padding: 0 0.75rem 0 0.75rem;
+}
+
+nav div {
+    display: flex;
+}
+
+nav .flex {
+    flex: 1;
+}
+
+nav div p{
+    border-radius: 10px;
+    padding: 0 0.75rem 0 0.75rem;
+}
+
+.main {
+    flex: 1;
+    width: 100%;
+    background: #f5f5f5;
+}
+
+footer {
+    height: 3rem;
+    width: 100%;
+}

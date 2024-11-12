@@ -85,6 +85,10 @@ a {
     color: white;
 }
 
+.text-black {
+    color: black;
+}
+
 .flex {
     flex: 1;
 }
@@ -153,7 +157,7 @@ nav #navbar #menu:hover .dropdown-content {
     display: block;
 }
 
-.main {
+#main {
     flex: 1;
     width: 100%;
     background: #f5f5f5;
@@ -163,7 +167,9 @@ nav #navbar #menu:hover .dropdown-content {
     overflow-y: auto;
 }
 
-.main .content {
+#main .content {
+    width: 90%;
+
     display: grid;
     grid-template-columns: repeat(5, 10rem);
     grid-auto-rows: 10rem;
@@ -174,7 +180,7 @@ nav #navbar #menu:hover .dropdown-content {
     padding: 0 10rem 0;
 }
 
-.main .content .item {
+#main .content .item {
     display: grid;
     place-items: center;
 
@@ -185,21 +191,48 @@ nav #navbar #menu:hover .dropdown-content {
 
     border: 8px solid #007BFF;
     border-radius: 10px;
+
+    cursor: pointer;
 }
 
-.main .content .item:active {
+#main .content .item:active {
     background: #1988ff;
 }
 
-.border {
-    border: 2px solid red;
+#main #info-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50rem;
+    min-height: 10rem;
+    padding: 20px;
+    background: #222222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#main #info-content {
+    width: 100%;
+}
+
+#main #info-box .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+}
+
+#main .hidden {
+    display: none;
 }
 
 footer {
     height: 2rem;
     width: 100%;
     font-size: 14px;
-    
 }
 
 footer p {

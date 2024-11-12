@@ -5,7 +5,7 @@ Lõpuprojekt "Arvutimängu lehekülg".
     -Suurenenud elemendis saab näha infot ja juhendit ning nupp, mis suunab ümber kasutaja valitud mängulehele.
     -Saab kergelt kataloogi lisada tulevikus rohkem mänge, kuna elemendid on grid layout-is.
 
-    Mäng 1 Lehekülg: Ajaraiskamis mäng
+    Mäng 1 Lehekülg: Ajaraiskamis mäng - Time Waster
     -Mängu alustades käivitub esimene taimer, mis näitab, kui kaua mäng on kestnud...
     -ja teine timer, mis hakkab kindlast 'x' arvust alla lugema iga sekund.
     -Mängija peab iga paari sekundi pärast ehk enne kui 'x' jõuab 0-ni vajutama nupule, et lähtestada arvu tagasi algsele väärtusele.

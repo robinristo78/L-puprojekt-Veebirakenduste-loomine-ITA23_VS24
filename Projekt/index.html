@@ -48,24 +48,33 @@
     </header>
 
     <!-- main -->
-    <div class="main">
-        <!-- <p>hello</p> -->
+    <div id="main">
+        <!-- kataloogi sisu -->
         <div class="content flex">
-            <a href="" class="item bg-primary">
+            <div class="item bg-primary" onclick="showInfo('TIC TAC TOE', 'TICTACTOE.html')">
                 <p class="text-white"><i class="fa-solid fa-hashtag"></i></p>
-            </a>
-            <a href="" class="item bg-primary">
+            </div>
+            <div class="item bg-primary" onclick="showInfo('Time Waster', 'TICTACTOE.html')">
                 <p class="text-white"><i class="fa-regular fa-clock"></i></p>
-            </a>
-            <a href="" class="item bg-primary">
+            </div>
+            <div class="item bg-primary">
                 <p class="text-white"></p>
-            </a>
-            <a href="" class="item bg-primary">
+            </div>
+            <div class="item bg-primary">
                 <p class="text-white"></p>
-            </a>
-            <a href="" class="item bg-primary">
+            </div>
+            <div class="item bg-primary">
                 <p class="text-white"></p>
-            </a>
+            </div>
+            <div class="item bg-primary">
+                <p class="text-white"></p>
+            </div>
+        </div>
+
+        <!-- showinfo -->
+        <div id="info-box" class="hidden">
+            <span class="close-button" onclick="closeInfo()">&times;</span>
+            <div id="info-content" class="text-white"></div>
         </div>
     </div>
 

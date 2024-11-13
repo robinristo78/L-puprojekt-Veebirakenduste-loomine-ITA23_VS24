@@ -102,12 +102,12 @@ nav {
 }
 
 nav p, nav a {
-    font-size: 28px;
+    font-size: 1.75rem;
     display: inline;
 }
 
 nav h1 {
-    font-size: 48px;
+    font-size: 3rem;
     display: inline;
     white-space: nowrap;
 }
@@ -189,9 +189,9 @@ nav #navbar #menu:hover .dropdown-content {
     height: 15rem;
     width: 15rem;
 
-    font-size: 144px;
+    font-size: 9rem;
 
-    border: 8px solid #007BFF;
+    border: 0.5rem solid #007BFF;
     border-radius: 10px;
 
     justify-content: center;
@@ -211,7 +211,7 @@ nav #navbar #menu:hover .dropdown-content {
     transform: translate(-50%, -50%);
     width: 50rem;
     min-height: 10rem;
-    padding: 20px;
+    padding: 1.25rem;
     background: #222222;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
@@ -252,7 +252,7 @@ nav #navbar #menu:hover .dropdown-content {
 
 #blog h1 {
     text-align: center;
-    font-size: 96px;
+    font-size: 6rem;
 }
 
 #blog ul h2 {

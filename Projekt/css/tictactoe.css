@@ -1,0 +1,43 @@
+#tictactoe {
+    flex: 1;
+    text-align: center;
+}
+
+#tictactoe h1 {
+    padding-top: 10rem;
+}
+
+#tictactoe .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+
+    justify-content: center;
+}
+
+#tictactoe .cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+#tictactoe .status {
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+#tictactoe button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}

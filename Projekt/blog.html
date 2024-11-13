@@ -30,18 +30,18 @@
 
             <!-- nav -->
             <div id="navbar" class="m-1">
-                <div class="m-2">
+                <div id="links" class="m-2">
                     <a href="index.html" class="m-1">Avaleht</a>
                     <a href="about.html"  class="m-1">About</a>
                     <a href="contact.html" class="m-1">Kontakt</a>
                 </div>
 
                 <!-- menu -->
-                <div id="menu">
+                <div id="menu" class="m-1">
                     <a href="" class="m-1"><i class="fa-solid fa-bars fa-2x"></i></a>
                 
                     <!-- 'dropdown' menu -->
-                    <div class="dropdown-content">
+                    <div class="dropdown-content" id="links">
                         <a href="blog.html" class="m-1">Blog</a>
                         <a href="#" onclick="closePage()" class="m-1">Quit</a>
                     </div>
@@ -51,26 +51,153 @@
     </header>
 
     <!-- main -->
-    <div id="main">
-        <ul class="bg-dark text-white m-5 p-5">
+    <div id="blog">
+        <h1 class="m-5">Dev Blog</h1>
+
+        <hr>
+
+        <!-- blog item MALL -->
+        <!-- <ul class="bg-dark text-white m-5 p-5">
             <h1>V0.0.1</h1>
             <li>Lisatud Index</li>
             <ul>
                 <li>Lehekülje üldine kujundus.</li>
             </ul>
-        </ul>
+        </ul> -->
+        
+        <!-- blog item -->
         <ul class="bg-dark text-white m-5 p-5">
-            <h1>V0.0.2</h1>
+            <h2>V0.2.2</h2>
+            <li>TICTACTOE.html muudatused.</li>
+            <ul>
+                <li>Lisatud mängu elemendid.</li>
+            </ul>
+            <li>Lisatud css/tictactoe.css</li>
+            <ul>
+                <li>Mängu elementide värv ja kujundus.</li>
+            </ul>
+            <li>Lisatud js/tictactoe.js</li>
+            <ul>
+                <li>mängu funktsioonid.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.2.1</h2>
+            <li>Lisatud lehekülje ikoon.</li>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.2.0</h2>
+            <li>Lisatud blog.html</li>
+            <li>Lisatud TICTACTOE.html</li>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.1.2</h2>
+            <li>index.html muudatused</li>
+            <ul>
+                <li>Info box, mis avaneb kui vajutada kataloogi elemendi peale.</li>
+            </ul>
+            <li>css/styles.css muudatused</li>
+            <ul>
+                <li>info box-i värvid, paigutus ja vorm.</li>
+            </ul>
+            <li>Lisatud js/scripts.js</li>
+            <ul>
+                <li>Info box-i funktsioonid lisatud.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.1.1</h2>
+            <li>Navbar</li>
+            <ul>
+                <li>lisatud dropdown menu.</li>
+                <ul>
+                    <li>Blog link</li>
+                    <li>"Quit" nupp</li>
+                </ul>
+            </ul>
+            <li>css/styles.css muudatused</li>
+            <ul>
+                <li>Kataloogi värvi ja kujunduse muudatused.</li>
+                <li>dropdown menu värv ja kujundus.</li>
+            </ul>
+            <li>Lisatud js/scripts.js</li>
+            <ul>
+                <li>"Quit" nuppu funkstioon lisatud.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.1.0</h2>
+            <li>index.html muudatused</li>
+            <ul>
+                <li>Kataloogi algvorm tehtud.</li>
+            </ul>
+            <li>css/styles.css  muudatused</li>
+            <ul>
+                <li>Kataloogi värv ja kujundus.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.0.4</h2>
+            <li>Lisatud about.html</li>
+            <li>Lisatud contact.html</li>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.0.3</h2>
+            <li>index.html muudatused</li>
+            <ul>
+                <li>Navbar-i kujundus.</li>
+                <li>Lisatud Ikoonid.</li>
+            </ul>
+            <li>css/styles.css muudatused</li>
+            <ul>
+                <li>Navbar-i nuppude värvid ja vorm.</li>
+            </ul>
+            <li>Lisatud 00_mall.html</li>
+            <ul>
+                <li>Kujundus kopeeritud index.html lehelt. Seda kasutatakse laialdaselt teistel lehtedel.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.0.2</h2>
             <li>Lisatud index.html</li>
             <ul>
                 <li>Lehekülje üldine sisu & kujundus.</li>
-                <li>Ikoonid.</li>
                 <li>Google API kaudu lisatud 'Roboto' font.</li>
             </ul>
             <li>Lisatud css/styles.css</li>
             <ul>
                 <li>CSS-i kaudu margin ja padding lähtestati 0-ks.</li>
-                <li>Elementide värvid ja suurused</li>
+                <li>Algelised elementide värvid ja suurused.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.0.2</h2>
+            <li>Lisatud index.html</li>
+            <ul>
+                <li>Lehekülje üldine sisu & kujundus.</li>
+                <li>Google API kaudu lisatud 'Roboto' font.</li>
+            </ul>
+            <li>Lisatud css/styles.css</li>
+            <ul>
+                <li>CSS-i kaudu margin ja padding lähtestati 0-ks.</li>
+                <li>Algelised elementide värvid ja suurused.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.0.1</h2>
+            <li>Lisatud Index</li>
+            <ul>
+                <li>Lehekülje üldine kujundus.</li>
             </ul>
         </ul>
     </div>

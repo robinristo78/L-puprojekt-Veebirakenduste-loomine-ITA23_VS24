@@ -12,6 +12,9 @@
     <script src="https://kit.fontawesome.com/829e65a4dd.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'><path d='M320 192l17.1 0c22.1 38.3 63.5 64 110.9 64c11 0 21.8-1.4 32-4l0 4 0 32 0 192c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-140.8L280 448l56 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-144 0c-53 0-96-43-96-96l0-223.5c0-16.1-12-29.8-28-31.8l-7.9-1c-17.5-2.2-30-18.2-27.8-35.7s18.2-30 35.7-27.8l7.9 1c48 6 84.1 46.8 84.1 95.3l0 85.3c34.4-51.7 93.2-85.8 160-85.8zm160 26.5s0 0 0 0c-10 3.5-20.8 5.5-32 5.5c-28.4 0-54-12.4-71.6-32c0 0 0 0 0 0c-3.7-4.1-7-8.5-9.9-13.2C357.3 164 352 146.6 352 128c0 0 0 0 0 0l0-96 0-20 0-1.3C352 4.8 356.7 .1 362.6 0l.2 0c3.3 0 6.4 1.6 8.4 4.2c0 0 0 0 0 .1L384 21.3l27.2 36.3L416 64l64 0 4.8-6.4L512 21.3 524.8 4.3c0 0 0 0 0-.1c2-2.6 5.1-4.2 8.4-4.2l.2 0C539.3 .1 544 4.8 544 10.7l0 1.3 0 20 0 96c0 17.3-4.6 33.6-12.6 47.6c-11.3 19.8-29.6 35.2-51.4 42.9zM432 128a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z'/></svg>" type="image/svg+xml">
+
     <title>GAMECAT | Game Catalogue</title>
 </head>
 <body>
@@ -27,18 +30,18 @@
 
             <!-- nav -->
             <div id="navbar" class="m-1">
-                <div class="m-2">
+                <div id="links" class="m-2">
                     <a href="index.html" class="m-1">Avaleht</a>
                     <a href="about.html"  class="m-1">About</a>
                     <a href="contact.html" class="m-1">Kontakt</a>
                 </div>
 
                 <!-- menu -->
-                <div id="menu">
+                <div id="menu" class="m-1">
                     <a href="" class="m-1"><i class="fa-solid fa-bars fa-2x"></i></a>
                 
                     <!-- 'dropdown' menu -->
-                    <div class="dropdown-content">
+                    <div class="dropdown-content" id="links">
                         <a href="blog.html" class="m-1">Blog</a>
                         <a href="#" onclick="closePage()" class="m-1">Quit</a>
                     </div>
@@ -48,8 +51,155 @@
     </header>
 
     <!-- main -->
-    <div id="main">
-        <p>hello</p>
+    <div id="blog">
+        <h1 class="m-5">Dev Blog</h1>
+
+        <hr>
+
+        <!-- blog item MALL -->
+        <!-- <ul class="bg-dark text-white m-5 p-5">
+            <h1>V0.0.1</h1>
+            <li>Lisatud Index</li>
+            <ul>
+                <li>Lehekülje üldine kujundus.</li>
+            </ul>
+        </ul> -->
+        
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.2.2</h2>
+            <li>TICTACTOE.html muudatused.</li>
+            <ul>
+                <li>Lisatud mängu elemendid.</li>
+            </ul>
+            <li>Lisatud css/tictactoe.css</li>
+            <ul>
+                <li>Mängu elementide värv ja kujundus.</li>
+            </ul>
+            <li>Lisatud js/tictactoe.js</li>
+            <ul>
+                <li>mängu funktsioonid.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.2.1</h2>
+            <li>Lisatud lehekülje ikoon.</li>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.2.0</h2>
+            <li>Lisatud blog.html</li>
+            <li>Lisatud TICTACTOE.html</li>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.1.2</h2>
+            <li>index.html muudatused</li>
+            <ul>
+                <li>Info box, mis avaneb kui vajutada kataloogi elemendi peale.</li>
+            </ul>
+            <li>css/styles.css muudatused</li>
+            <ul>
+                <li>info box-i värvid, paigutus ja vorm.</li>
+            </ul>
+            <li>Lisatud js/scripts.js</li>
+            <ul>
+                <li>Info box-i funktsioonid lisatud.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.1.1</h2>
+            <li>Navbar</li>
+            <ul>
+                <li>lisatud dropdown menu.</li>
+                <ul>
+                    <li>Blog link</li>
+                    <li>"Quit" nupp</li>
+                </ul>
+            </ul>
+            <li>css/styles.css muudatused</li>
+            <ul>
+                <li>Kataloogi värvi ja kujunduse muudatused.</li>
+                <li>dropdown menu värv ja kujundus.</li>
+            </ul>
+            <li>Lisatud js/scripts.js</li>
+            <ul>
+                <li>"Quit" nuppu funkstioon lisatud.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.1.0</h2>
+            <li>index.html muudatused</li>
+            <ul>
+                <li>Kataloogi algvorm tehtud.</li>
+            </ul>
+            <li>css/styles.css  muudatused</li>
+            <ul>
+                <li>Kataloogi värv ja kujundus.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.0.4</h2>
+            <li>Lisatud about.html</li>
+            <li>Lisatud contact.html</li>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.0.3</h2>
+            <li>index.html muudatused</li>
+            <ul>
+                <li>Navbar-i kujundus.</li>
+                <li>Lisatud Ikoonid.</li>
+            </ul>
+            <li>css/styles.css muudatused</li>
+            <ul>
+                <li>Navbar-i nuppude värvid ja vorm.</li>
+            </ul>
+            <li>Lisatud 00_mall.html</li>
+            <ul>
+                <li>Kujundus kopeeritud index.html lehelt. Seda kasutatakse laialdaselt teistel lehtedel.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.0.2</h2>
+            <li>Lisatud index.html</li>
+            <ul>
+                <li>Lehekülje üldine sisu & kujundus.</li>
+                <li>Google API kaudu lisatud 'Roboto' font.</li>
+            </ul>
+            <li>Lisatud css/styles.css</li>
+            <ul>
+                <li>CSS-i kaudu margin ja padding lähtestati 0-ks.</li>
+                <li>Algelised elementide värvid ja suurused.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.0.2</h2>
+            <li>Lisatud index.html</li>
+            <ul>
+                <li>Lehekülje üldine sisu & kujundus.</li>
+                <li>Google API kaudu lisatud 'Roboto' font.</li>
+            </ul>
+            <li>Lisatud css/styles.css</li>
+            <ul>
+                <li>CSS-i kaudu margin ja padding lähtestati 0-ks.</li>
+                <li>Algelised elementide värvid ja suurused.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.0.1</h2>
+            <li>Lisatud Index</li>
+            <ul>
+                <li>Lehekülje üldine kujundus.</li>
+            </ul>
+        </ul>
     </div>
 
     <!-- footer -->

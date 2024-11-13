@@ -102,12 +102,12 @@ nav {
 }
 
 nav p, nav a {
-    font-size: 28px;
+    font-size: 1.75rem;
     display: inline;
 }
 
 nav h1 {
-    font-size: 48px;
+    font-size: 3rem;
     display: inline;
     white-space: nowrap;
 }
@@ -122,13 +122,13 @@ nav div {
     display: flex;
 }
 
-nav #navbar a {
+nav #navbar #links a {
     border-radius: 2px;
     padding: 0.25rem 0.75rem 0.25rem;
     border: 0.25rem solid #222222;
 }
 
-nav #navbar a:hover {
+nav #navbar #links a:hover {
     background: #383838;
 }
 
@@ -158,12 +158,13 @@ nav #navbar #menu:hover .dropdown-content {
 }
 
 #main {
+    display: flex;
     flex: 1;
     width: 100%;
     background: #f5f5f5;
 
-    place-items: center;
-    /* justify-content: center; */
+    justify-content: center;
+
     overflow-y: auto;
 }
 
@@ -171,26 +172,30 @@ nav #navbar #menu:hover .dropdown-content {
     width: 90%;
 
     display: grid;
-    grid-template-columns: repeat(5, 10rem);
+    grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: 10rem;
-    row-gap: 5rem;
-    gap: 10rem;
+    row-gap: 10rem;
+    gap: 1fr;
     
     margin: 3rem;
     padding: 0 10rem 0;
+
+    place-items: center;
 }
 
 #main .content .item {
-    display: grid;
-    place-items: center;
+    display: flex;
 
-    height: 10rem;
-    width: 10rem;
+    height: 15rem;
+    width: 15rem;
 
-    font-size: 96px;
+    font-size: 9rem;
 
-    border: 8px solid #007BFF;
+    border: 0.5rem solid #007BFF;
     border-radius: 10px;
+
+    justify-content: center;
+    align-items: center;
 
     cursor: pointer;
 }
@@ -206,7 +211,7 @@ nav #navbar #menu:hover .dropdown-content {
     transform: translate(-50%, -50%);
     width: 50rem;
     min-height: 10rem;
-    padding: 20px;
+    padding: 1.25rem;
     background: #222222;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
@@ -228,6 +233,37 @@ nav #navbar #menu:hover .dropdown-content {
 #main .hidden {
     display: none;
 }
+
+#blog {
+    flex: 1;
+    width: 100%;
+    background: #f5f5f5;
+
+    place-items: center;
+    /* justify-content: center; */
+    overflow-y: auto;
+    
+}
+
+#blog ul li {
+    padding: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+#blog h1 {
+    text-align: center;
+    font-size: 6rem;
+}
+
+#blog ul h2 {
+    margin-bottom: 2rem;
+}
+
+#blog ul ul {
+    padding-left: 3rem;
+}
+
+
 
 footer {
     height: 2rem;

@@ -229,6 +229,23 @@ nav #navbar #menu:hover .dropdown-content {
     display: none;
 }
 
+#main ul {
+
+}
+
+#main ul li {
+    padding: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+#main ul h1 {
+    margin-bottom: 2rem;
+}
+
+#main ul ul {
+    padding-left: 3rem;
+}
+
 footer {
     height: 2rem;
     width: 100%;

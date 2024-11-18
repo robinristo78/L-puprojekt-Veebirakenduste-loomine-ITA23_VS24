@@ -19,42 +19,11 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <!-- logo -->
-        <nav class="bg-dark text-white">
-            <div class="flex m-1">
-                <a href="index.html">
-                    <h1 class="bold"><i class="fa-solid fa-cat" style="color: #ffffff;"></i>Game<span class="bg-primary">CAT</span></h1>
-                </a>
-            </div>
-
-            <!-- nav -->
-            <div id="navbar" class="m-1">
-                <div id="links" class="m-2">
-                    <a href="index.html" class="m-1">Avaleht</a>
-                    <a href="about.html"  class="m-1">About</a>
-                    <a href="contact.html" class="m-1">Kontakt</a>
-                </div>
-
-                <!-- menu -->
-                <div id="menu" class="m-1">
-                    <a href="" class="m-1"><i class="fa-solid fa-bars fa-2x"></i></a>
-                
-                    <!-- 'dropdown' menu -->
-                    <div class="dropdown-content" id="links">
-                        <a href="blog.html" class="m-1">Blog</a>
-                        <a href="#" onclick="closePage()" class="m-1">Quit</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div id="header"></div>
 
     <!-- main -->
     <div id="blog">
         <h1 class="m-5">Dev Blog</h1>
-
-        <hr>
 
         <!-- blog item MALL -->
         <!-- <ul class="bg-dark text-white m-5 p-5">
@@ -67,7 +36,60 @@
         
         <!-- blog item -->
         <ul class="bg-dark text-white m-5 p-5">
-            <h2>V0.2.2</h2>
+            <h2>V0.3.1 <span>[18.11.2024]</span></h2>
+            <li>about.html muudatused.</li>
+            <ul>
+                <li>Tekst lisatud.</li>
+            </ul>
+            <li>contact.html muudatused.</li>
+            <ul>
+                <li>Info Lisatud.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.3.0 <span>[18.11.2024]</span></h2>
+            <li>Lisatud uus mäng "Time Waster" - Aja Raiskaja:</li>
+            <ul>
+                <li>Lisatud TIMEWASTER.html</li>
+                <li>Lisatud timewaster.css</li>
+                <li>Lisatud timewaster.js</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.2.3 <span>[18.11.2024]</span></h2>
+            
+            <li>Mobile Support:</li>
+            <ul>
+                <li>Kui lehekülje laius on alla 767px, siis kaovad lingid navigatsiooniribalt. Jääb ainult 'dropdown' ehk 'hamburgeri' menüü.</li>
+                <li>'dropdown' ehk 'hamburgeri' menüü nüüd hoiab teisi linke ka kui lehekülje laius on alla 767px.</li>
+            </ul>
+            <li>Lisatud header.html.</li>
+            <ul>
+                <li>Iga lehekülg hangib oma päised header.html failist pariteedi jaoks.</li>
+            </ul>
+            <li>index.html muudatused.</li>
+            <ul>
+                <li>Kataloogi kujunduse muudatus.</li>
+                <li>Kataloogi elementide veerud vähenevad nüüd koos lehekülje/ekraani laiusega.</li>
+                <li>'Tic Tac Toe' mängu info box-i kujunduse muudatus.</li>
+                <li>'Tic Tac Toe' mängu pilt ja pealkiri.</li>
+            </ul>
+            <li>scripts.js muudatused</li>
+            <ul>
+                <li>showInfo funktsioon muudetud:</li>
+                <ul>
+                    <li>Nüüd vajab see ainult id argumenti, mitte 'nimi' & 'link'.</li>
+                    <li>Hangib 'id' kaudu 'game' Dictionary-st mängu informatsiooni.</li>
+                    <li>Funktsiooni sisse on kirjutatud mängu Dictionary, milles on iga mängu nimi, kirjeldus ja link.</li>
+                </ul>
+                <li>Lisatud toggleDropdown funktsioon, mis avab ja sulgeb 'dropdown' ehk 'hamburgeri' menüü.</li>
+            </ul>
+        </ul>
+        <!-- blog item -->
+        <ul class="bg-dark text-white m-5 p-5">
+            <h2>V0.2.2 <span>[13.11.2024]</span></h2>
             <li>TICTACTOE.html muudatused.</li>
             <ul>
                 <li>Lisatud mängu elemendid.</li>
@@ -83,18 +105,18 @@
         </ul>
         <!-- blog item -->
         <ul class="bg-dark text-white m-5 p-5">
-            <h2>V0.2.1</h2>
+            <h2>V0.2.1 <span>[12.11.2024]</span></h2>
             <li>Lisatud lehekülje ikoon.</li>
         </ul>
         <!-- blog item -->
         <ul class="bg-dark text-white m-5 p-5">
-            <h2>V0.2.0</h2>
+            <h2>V0.2.0 <span>[12.11.2024]</span></h2>
             <li>Lisatud blog.html</li>
             <li>Lisatud TICTACTOE.html</li>
         </ul>
         <!-- blog item -->
         <ul class="bg-dark text-white m-5 p-5">
-            <h2>V0.1.2</h2>
+            <h2>V0.1.2 <span>[12.11.2024]</span></h2>
             <li>index.html muudatused</li>
             <ul>
                 <li>Info box, mis avaneb kui vajutada kataloogi elemendi peale.</li>
@@ -110,7 +132,7 @@
         </ul>
         <!-- blog item -->
         <ul class="bg-dark text-white m-5 p-5">
-            <h2>V0.1.1</h2>
+            <h2>V0.1.1 <span>[12.11.2024]</span></h2>
             <li>Navbar</li>
             <ul>
                 <li>lisatud dropdown menu.</li>
@@ -131,7 +153,7 @@
         </ul>
         <!-- blog item -->
         <ul class="bg-dark text-white m-5 p-5">
-            <h2>V0.1.0</h2>
+            <h2>V0.1.0 <span>[11.11.2024]</span></h2>
             <li>index.html muudatused</li>
             <ul>
                 <li>Kataloogi algvorm tehtud.</li>
@@ -143,13 +165,13 @@
         </ul>
         <!-- blog item -->
         <ul class="bg-dark text-white m-5 p-5">
-            <h2>V0.0.4</h2>
+            <h2>V0.0.3 <span>[11.11.2024]</span></h2>
             <li>Lisatud about.html</li>
             <li>Lisatud contact.html</li>
         </ul>
         <!-- blog item -->
         <ul class="bg-dark text-white m-5 p-5">
-            <h2>V0.0.3</h2>
+            <h2>V0.0.2 <span>[11.11.2024]</span></h2>
             <li>index.html muudatused</li>
             <ul>
                 <li>Navbar-i kujundus.</li>
@@ -166,7 +188,7 @@
         </ul>
         <!-- blog item -->
         <ul class="bg-dark text-white m-5 p-5">
-            <h2>V0.0.2</h2>
+            <h2>V0.0.1 <span>[10.11.2024]</span></h2>
             <li>Lisatud index.html</li>
             <ul>
                 <li>Lehekülje üldine sisu & kujundus.</li>
@@ -176,28 +198,6 @@
             <ul>
                 <li>CSS-i kaudu margin ja padding lähtestati 0-ks.</li>
                 <li>Algelised elementide värvid ja suurused.</li>
-            </ul>
-        </ul>
-        <!-- blog item -->
-        <ul class="bg-dark text-white m-5 p-5">
-            <h2>V0.0.2</h2>
-            <li>Lisatud index.html</li>
-            <ul>
-                <li>Lehekülje üldine sisu & kujundus.</li>
-                <li>Google API kaudu lisatud 'Roboto' font.</li>
-            </ul>
-            <li>Lisatud css/styles.css</li>
-            <ul>
-                <li>CSS-i kaudu margin ja padding lähtestati 0-ks.</li>
-                <li>Algelised elementide värvid ja suurused.</li>
-            </ul>
-        </ul>
-        <!-- blog item -->
-        <ul class="bg-dark text-white m-5 p-5">
-            <h2>V0.0.1</h2>
-            <li>Lisatud Index</li>
-            <ul>
-                <li>Lehekülje üldine kujundus.</li>
             </ul>
         </ul>
     </div>
@@ -209,5 +209,11 @@
 
     <!-- Scripts -->
     <script src="js/scripts.js"></script>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
 </body>
 </html>

@@ -19,40 +19,29 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <!-- logo -->
-        <nav class="bg-dark text-white">
-            <div class="flex m-1">
-                <a href="index.html">
-                    <h1 class="bold"><i class="fa-solid fa-cat" style="color: #ffffff;"></i>Game<span class="bg-primary">CAT</span></h1>
-                </a>
-            </div>
-
-            <!-- nav -->
-            <div id="navbar" class="m-1">
-                <div id="links" class="m-2">
-                    <a href="index.html" class="m-1">Avaleht</a>
-                    <a href="about.html"  class="m-1">About</a>
-                    <a href="contact.html" class="m-1">Kontakt</a>
-                </div>
-
-                <!-- menu -->
-                <div id="menu" class="m-1">
-                    <a href="" class="m-1"><i class="fa-solid fa-bars fa-2x"></i></a>
-                
-                    <!-- 'dropdown' menu -->
-                    <div class="dropdown-content" id="links">
-                        <a href="blog.html" class="m-1">Blog</a>
-                        <a href="#" onclick="closePage()" class="m-1">Quit</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div id="header"></div>
 
     <!-- main -->
-    <div id="main">
-        <p>hello</p>
+    <div id="blog">
+        <h1 class="m-5">About me</h1>
+        
+        <ul class="bg-dark text-white m-5 p-5">
+        
+            <li><h2 class="m-2">Hi! I'm Robin Risto Kivit, an aspiring Junior Software Developer with a passion for games. This catalogue features a collection of self-made games that I have developed to learn web design and software development.</h2></li>
+
+            <li><h2>As a student, I focus on creating engaging and innovative experiences, experimenting with different programming languages, tools, and development practices. Each game in this catalogue is a product of my dedication to learning, testing new ideas, and improving my skills.</h2></li>
+        
+        </ul>
+
+        <ul class="bg-dark text-white m-5 p-5">
+            <li><h3>Tools & Technologies Used:</h3></li>
+
+            <ul>
+                <li>Programming Languages: JavaScript</li> 
+                <li>Web development: HTML, CSS</li>
+                <li>Version Control: GitHub, Google Drive</li>
+            </ul>
+        </ul>
     </div>
 
     <!-- footer -->
@@ -62,5 +51,11 @@
 
     <!-- Scripts -->
     <script src="js/scripts.js"></script>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
 </body>
 </html>

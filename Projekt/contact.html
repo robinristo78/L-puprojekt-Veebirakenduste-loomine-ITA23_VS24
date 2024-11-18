@@ -19,40 +19,18 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <!-- logo -->
-        <nav class="bg-dark text-white">
-            <div class="flex m-1">
-                <a href="index.html">
-                    <h1 class="bold"><i class="fa-solid fa-cat" style="color: #ffffff;"></i>Game<span class="bg-primary">CAT</span></h1>
-                </a>
-            </div>
-
-            <!-- nav -->
-            <div id="navbar" class="m-1">
-                <div id="links" class="m-2">
-                    <a href="index.html" class="m-1">Avaleht</a>
-                    <a href="about.html"  class="m-1">About</a>
-                    <a href="contact.html" class="m-1">Kontakt</a>
-                </div>
-
-                <!-- menu -->
-                <div id="menu" class="m-1">
-                    <a href="" class="m-1"><i class="fa-solid fa-bars fa-2x"></i></a>
-                
-                    <!-- 'dropdown' menu -->
-                    <div class="dropdown-content" id="links">
-                        <a href="blog.html" class="m-1">Blog</a>
-                        <a href="#" onclick="closePage()" class="m-1">Quit</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div id="header"></div>
 
     <!-- main -->
-    <div id="main">
-        <p>hello</p>
+    <div id="blog">
+        <h1 class="m-5">Contact</h1>
+        
+        <ul class="bg-primary text-white m-5 p-4">
+            <li style="font-size: 1.5rem;">E-mail: robin-risto.kivit@voco.ee</li>
+        </ul>
+        <ul class="bg-primary text-white m-5 p-4">
+            <li style="font-size: 1.5rem;">GitHub: <a href="https://github.com/robinristo78" style="text-decoration: underline;">https://github.com/robinristo78</a></li>
+        </ul>
     </div>
 
     <!-- footer -->
@@ -62,5 +40,11 @@
 
     <!-- Scripts -->
     <script src="js/scripts.js"></script>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
 </body>
 </html>

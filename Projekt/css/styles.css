@@ -305,9 +305,9 @@ nav #navbar .links a:hover {
     text-decoration: underline;
 }
 
-/* #blog ul {
-    width: 80%;
-} */
+#blog .item {
+    width: 90%;
+}
 
 #blog ul h2 {
     margin-bottom: 2rem;

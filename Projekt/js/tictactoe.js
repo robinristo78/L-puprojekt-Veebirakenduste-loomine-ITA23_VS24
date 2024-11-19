@@ -24,7 +24,10 @@ function handlePlayerChange() {
   document.getElementById("gameStatus").innerHTML = `Player ${currentPlayer}'s turn`;
 
   if (vsComputer && currentPlayer === "O") {
-    setTimeout(computerMove, 50); // Delay for a more natural effect
+    setTimeout(computerMove, 500); // Delay for a more natural effect
+    disableCellClicks(); // Disable cell clicks during computer's turn
+  } else {
+    enableCellClicks(); // Re-enable clicks when it's the player's turn
   }
 }
 
@@ -83,12 +86,27 @@ function computerMove() {
   }
 }
 
+// Disable cell clicks during the computer's turn
+function disableCellClicks() {
+  document.querySelectorAll(".cell").forEach(cell => {
+    cell.removeEventListener("click", handleCellClick); // Disable click event
+  });
+}
+
+// Enable cell clicks after the computer's turn
+function enableCellClicks() {
+  document.querySelectorAll(".cell").forEach(cell => {
+    cell.addEventListener("click", handleCellClick); // Enable click event
+  });
+}
+
 function resetGame() {
   currentPlayer = "X";
   gameActive = true;
   gameState = ["", "", "", "", "", "", "", "", ""];
   document.getElementById("gameStatus").innerHTML = "Player X's turn";
   document.querySelectorAll(".cell").forEach(cell => (cell.innerHTML = ""));
+  enableCellClicks(); // Enable cell clicks at the start of a new game
 }
 
 // Toggle "vs. Computer" mode

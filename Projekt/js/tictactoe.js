@@ -1,6 +1,7 @@
 let currentPlayer = "X";
 let gameActive = true;
 let gameState = ["", "", "", "", "", "", "", "", ""];
+let vsComputer = false; // Tracks if "vs. Computer" mode is active
 
 const winningConditions = [
   [0, 1, 2],
@@ -21,6 +22,10 @@ function handleCellPlayed(clickedCell, clickedCellIndex) {
 function handlePlayerChange() {
   currentPlayer = currentPlayer === "X" ? "O" : "X";
   document.getElementById("gameStatus").innerHTML = `Player ${currentPlayer}'s turn`;
+
+  if (vsComputer && currentPlayer === "O") {
+    setTimeout(computerMove, 500); // Delay for a more natural effect
+  }
 }
 
 function handleResultValidation() {
@@ -62,6 +67,22 @@ function handleCellClick(clickedCellEvent) {
   handleResultValidation();
 }
 
+// Handle the computer's move
+function computerMove() {
+  if (!gameActive) return; // Stop if the game is over
+  
+  let availableCells = gameState
+    .map((cell, index) => (cell === "" ? index : null))
+    .filter(index => index !== null); // Get indices of empty cells
+  
+  if (availableCells.length > 0) {
+    const randomIndex = availableCells[Math.floor(Math.random() * availableCells.length)];
+    const cell = document.querySelector(`[data-cell-index='${randomIndex}']`);
+    handleCellPlayed(cell, randomIndex);
+    handleResultValidation();
+  }
+}
+
 function resetGame() {
   currentPlayer = "X";
   gameActive = true;
@@ -69,6 +90,15 @@ function resetGame() {
   document.getElementById("gameStatus").innerHTML = "Player X's turn";
   document.querySelectorAll(".cell").forEach(cell => (cell.innerHTML = ""));
 }
+
+// Toggle "vs. Computer" mode
+document.getElementById("vsComputerToggle").addEventListener("click", () => {
+  vsComputer = !vsComputer;
+  document.getElementById("vsComputerToggle").innerHTML = vsComputer 
+      ? "Playing vs. Computer" 
+      : "Play vs. Computer";
+  resetGame(); // Restart the game when toggling
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const gameBoard = document.getElementById("gameBoard");

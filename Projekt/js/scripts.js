@@ -20,7 +20,7 @@ const game = {
         desc: `<span class="bold">Time Waster:</span><br><hr>
         Time Waster is a slow-paced game designed to challenge your patience and willpower.<br>
         The game begins with a 20-second countdown timer, slowly ticking away.<br>
-        Your goal is to keep resetting the timer to 20 seconds by clicking anywhere on the screen, extending your Time Played'.<br>
+        Your goal is to keep resetting the timer to 20 seconds by clicking anywhere on the screen, extending your 'Time Played'.<br>
         <br>
         <span class="bold">How to Play:</span><br><hr>
         Stay calm and focused as the timer ticks down from 20 seconds.<br>

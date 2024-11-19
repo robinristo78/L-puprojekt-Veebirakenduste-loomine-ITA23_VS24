@@ -24,7 +24,7 @@ function handlePlayerChange() {
   document.getElementById("gameStatus").innerHTML = `Player ${currentPlayer}'s turn`;
 
   if (vsComputer && currentPlayer === "O") {
-    setTimeout(computerMove, 500); // Delay for a more natural effect
+    setTimeout(computerMove, 50); // Delay for a more natural effect
   }
 }
 

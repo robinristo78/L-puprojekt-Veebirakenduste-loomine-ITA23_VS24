@@ -313,6 +313,7 @@ nav #navbar .links a:hover {
 
 #blog .item {
     width: 90%;
+    margin: 3rem auto;
 }
 
 #blog ul h2 {

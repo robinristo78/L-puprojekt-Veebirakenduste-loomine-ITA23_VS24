@@ -19,6 +19,7 @@ function updateCountdown() {
     countdownTime -= 0.1; // Decrease timer by 0.1 second
     countdownElement.textContent = countdownTime.toFixed(1);
     updateProgressCircle();
+    checkAndUpdatePersonalBest(timePlayed);
 }
 
 // Function to update the progress circle
@@ -80,7 +81,7 @@ function checkAndUpdatePersonalBest(currentTimePlayed) {
     const personalBest = getPersonalBest();
     if (currentTimePlayed > personalBest) {
         setPersonalBest(currentTimePlayed);
-        updatePersonalBestDisplay();
+        updatePersonalBestDisplay(); //Maybe remove this.
     }
 }
 

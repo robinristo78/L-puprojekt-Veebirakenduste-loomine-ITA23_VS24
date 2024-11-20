@@ -33,14 +33,13 @@ function updateTimePlayed() {
     timePlayedElement.textContent = timePlayed.toFixed(1);
 }
 
-// Reset the game
-function resetGame() {
-    if (countdownTime <= 0) return; // Don't reset after game over
-    countdownTime = 20;
-    timePlayed = 0;
-    updateProgressCircle();
-    timePlayedElement.textContent = timePlayed.toFixed(1);
-    gameOverMessage.style.display = 'none';
+// Reset the countdown timer (does not reset time played)
+function resetCountdown() {
+    if (countdownTime > 0) {
+        countdownTime = 20;
+        updateProgressCircle();
+        gameOverMessage.style.display = 'none';
+    }
 }
 
 // Game over handler
@@ -81,8 +80,8 @@ function startGame() {
     playedInterval = setInterval(updateTimePlayed, 100); // Time played updates every 100ms
 }
 
-// Event listener to reset the countdown timer
-document.body.addEventListener('click', resetGame);
+// Event listener to reset the countdown timer (does not reset time played)
+document.body.addEventListener('click', resetCountdown);
 
 // Initialize the game
 document.addEventListener('DOMContentLoaded', () => {

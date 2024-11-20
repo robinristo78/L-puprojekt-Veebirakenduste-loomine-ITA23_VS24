@@ -81,7 +81,7 @@ function checkAndUpdatePersonalBest(currentTimePlayed) {
     const personalBest = getPersonalBest();
     if (currentTimePlayed > personalBest) {
         setPersonalBest(currentTimePlayed);
-        updatePersonalBestDisplay(); //Maybe remove this.
+        //updatePersonalBestDisplay(); //Maybe remove this.
     }
 }
 
@@ -89,6 +89,8 @@ function checkAndUpdatePersonalBest(currentTimePlayed) {
 function startGame() {
     countdownInterval = setInterval(updateCountdown, 100); // Countdown updates every 100ms
     playedInterval = setInterval(updateTimePlayed, 100); // Time played updates every 100ms
+
+    updatePersonalBestDisplay();
 }
 
 // Event listener to handle clicks

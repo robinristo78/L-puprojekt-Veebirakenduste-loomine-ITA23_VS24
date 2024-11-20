@@ -73,15 +73,38 @@ function handleCellClick(clickedCellEvent) {
 // Handle the computer's move
 function computerMove() {
   if (!gameActive) return; // Stop if the game is over
-  
+
+  // Find indices of empty cells
   let availableCells = gameState
     .map((cell, index) => (cell === "" ? index : null))
-    .filter(index => index !== null); // Get indices of empty cells
-  
+    .filter(index => index !== null);
+
   if (availableCells.length > 0) {
-    const randomIndex = availableCells[Math.floor(Math.random() * availableCells.length)];
-    const cell = document.querySelector(`[data-cell-index='${randomIndex}']`);
-    handleCellPlayed(cell, randomIndex);
+    // Check for potential winning conditions
+    let potentialMoves = [];
+
+    for (let condition of winningConditions) {
+      let cells = condition.map(index => gameState[index]);
+      let emptyCount = cells.filter(cell => cell === "").length;
+      let computerCount = cells.filter(cell => cell === "O").length;
+
+      // If the computer can move towards a win (line with "O" and empty spaces)
+      if (emptyCount > 0 && computerCount > 0 && emptyCount + computerCount === 3) {
+        potentialMoves.push(...condition.filter(index => gameState[index] === ""));
+      }
+    }
+
+    // Prioritize strategic moves, or fall back to random if none exist
+    let moveIndex;
+    if (potentialMoves.length > 0) {
+      moveIndex = potentialMoves[Math.floor(Math.random() * potentialMoves.length)];
+    } else {
+      moveIndex = availableCells[Math.floor(Math.random() * availableCells.length)];
+    }
+
+    // Make the move
+    const cell = document.querySelector(`[data-cell-index='${moveIndex}']`);
+    handleCellPlayed(cell, moveIndex);
     handleResultValidation();
   }
 }

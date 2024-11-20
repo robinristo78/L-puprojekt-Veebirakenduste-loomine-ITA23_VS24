@@ -150,8 +150,8 @@ nav #navbar #menu .dropdown-content {
     /* box-shadow: 0px 8px 16px rgba(0,0,0,0.2); */
     z-index: 1;
 
-    height: calc(100vh - 4rem);
-    overflow-y: auto
+    height: calc(100vh - 6rem);
+    overflow-y: auto;
 }
 
 #toggle:focus ~ nav #navbar #menu .dropdown-content {

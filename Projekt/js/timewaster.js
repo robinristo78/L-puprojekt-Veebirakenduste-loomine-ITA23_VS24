@@ -1,8 +1,8 @@
-// script.js
 const countdownElement = document.getElementById('countdown');
 const timePlayedElement = document.getElementById('timePlayed');
 const progressCircle = document.getElementById('progress');
 const gameOverMessage = document.getElementById('gameOver');
+const personalBestElement = document.getElementById('personalBest');
 
 let countdownTime = 20; // Countdown timer starts at 20 seconds
 let timePlayed = 0; // Time played counter
@@ -13,7 +13,7 @@ function updateCountdown() {
     if (countdownTime <= 0) {
         clearInterval(countdownInterval);
         clearInterval(playedInterval);
-        gameOverMessage.style.display = 'block';
+        gameOver();
         return;
     }
     countdownTime -= 0.1; // Decrease timer by 0.1 second
@@ -37,7 +37,42 @@ function updateTimePlayed() {
 function resetGame() {
     if (countdownTime <= 0) return; // Don't reset after game over
     countdownTime = 20;
+    timePlayed = 0;
     updateProgressCircle();
+    timePlayedElement.textContent = timePlayed.toFixed(1);
+    gameOverMessage.style.display = 'none';
+}
+
+// Game over handler
+function gameOver() {
+    gameOverMessage.style.display = 'block';
+    checkAndUpdatePersonalBest(timePlayed);
+}
+
+// Function to get the personal best from localStorage
+function getPersonalBest() {
+    return parseFloat(localStorage.getItem('personalBest')) || 0;
+}
+
+// Function to save the personal best to localStorage
+function setPersonalBest(score) {
+    localStorage.setItem('personalBest', score.toFixed(1));
+}
+
+// Function to update the personal best on the webpage
+function updatePersonalBestDisplay() {
+    const personalBest = getPersonalBest();
+    personalBestElement.textContent = personalBest.toFixed(1);
+}
+
+// Function to check and update the personal best
+function checkAndUpdatePersonalBest(currentTimePlayed) {
+    const personalBest = getPersonalBest();
+    if (currentTimePlayed > personalBest) {
+        setPersonalBest(currentTimePlayed);
+        updatePersonalBestDisplay();
+        alert("Congratulations! New Personal Best: " + currentTimePlayed.toFixed(1) + " seconds");
+    }
 }
 
 // Start the game
@@ -50,4 +85,7 @@ function startGame() {
 document.body.addEventListener('click', resetGame);
 
 // Initialize the game
-startGame();
+document.addEventListener('DOMContentLoaded', () => {
+    updatePersonalBestDisplay(); // Display personal best on page load
+    startGame();
+});

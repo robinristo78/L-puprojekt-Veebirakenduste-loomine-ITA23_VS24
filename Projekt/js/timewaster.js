@@ -1,11 +1,11 @@
 const countdownElement = document.getElementById('countdown');
 const timePlayedElement = document.getElementById('timePlayed');
 const progressCircle = document.getElementById('progress');
-const gameOverMessage = document.getElementById('gameOver');
 const personalBestElement = document.getElementById('personalBest');
 
 let countdownTime = 20; // Countdown timer starts at 20 seconds
 let timePlayed = 0; // Time played counter
+let gameOver = false; // Track whether the game is over
 let countdownInterval, playedInterval;
 
 // Function to update the countdown timer
@@ -13,7 +13,7 @@ function updateCountdown() {
     if (countdownTime <= 0) {
         clearInterval(countdownInterval);
         clearInterval(playedInterval);
-        gameOver();
+        handleGameOver();
         return;
     }
     countdownTime -= 0.1; // Decrease timer by 0.1 second
@@ -33,19 +33,30 @@ function updateTimePlayed() {
     timePlayedElement.textContent = timePlayed.toFixed(1);
 }
 
-// Reset the countdown timer (does not reset time played)
-function resetCountdown() {
-    if (countdownTime > 0) {
-        countdownTime = 20;
-        updateProgressCircle();
-        gameOverMessage.style.display = 'none';
-    }
+// Handle game over logic
+function handleGameOver() {
+    gameOver = true;
+    checkAndUpdatePersonalBest(timePlayed);
 }
 
-// Game over handler
-function gameOver() {
-    gameOverMessage.style.display = 'block';
-    checkAndUpdatePersonalBest(timePlayed);
+// Function to reset the countdown time
+function resetCountdown() {
+    countdownTime = 20; // Reset countdown
+    updateProgressCircle();
+    countdownElement.textContent = countdownTime.toFixed(1); // Update display
+}
+
+// Function to fully reset the game
+function resetGame() {
+    clearInterval(countdownInterval);
+    clearInterval(playedInterval);
+    countdownTime = 20; // Reset countdown
+    timePlayed = 0; // Reset time played
+    gameOver = false; // Reset game state
+    updateProgressCircle();
+    timePlayedElement.textContent = timePlayed.toFixed(1); // Reset display
+    countdownElement.textContent = countdownTime.toFixed(1); // Reset display
+    startGame();
 }
 
 // Function to get the personal best from localStorage
@@ -70,7 +81,6 @@ function checkAndUpdatePersonalBest(currentTimePlayed) {
     if (currentTimePlayed > personalBest) {
         setPersonalBest(currentTimePlayed);
         updatePersonalBestDisplay();
-        alert("Congratulations! New Personal Best: " + currentTimePlayed.toFixed(1) + " seconds");
     }
 }
 
@@ -80,8 +90,14 @@ function startGame() {
     playedInterval = setInterval(updateTimePlayed, 100); // Time played updates every 100ms
 }
 
-// Event listener to reset the countdown timer (does not reset time played)
-document.body.addEventListener('click', resetCountdown);
+// Event listener to handle clicks
+document.body.addEventListener('click', () => {
+    if (gameOver) {
+        resetGame(); // Restart game after game over
+    } else {
+        resetCountdown(); // Reset countdown during gameplay
+    }
+});
 
 // Initialize the game
 document.addEventListener('DOMContentLoaded', () => {
